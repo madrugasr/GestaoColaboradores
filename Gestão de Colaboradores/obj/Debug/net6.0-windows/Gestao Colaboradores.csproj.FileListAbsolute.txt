@@ -1,0 +1,11 @@
+C:\Users\daniel.marques\Documents\Engenharia Informática\FP\C#\Gestão Colaboradores\Gestão de Colaboradores\obj\Debug\net6.0-windows\Gestao Colaboradores.csproj.AssemblyReference.cache
+C:\Users\daniel.marques\Documents\Engenharia Informática\FP\C#\Gestão Colaboradores\Gestão de Colaboradores\obj\Debug\net6.0-windows\Gestão_de_Colaboradores.Criar.resources
+C:\Users\daniel.marques\Documents\Engenharia Informática\FP\C#\Gestão Colaboradores\Gestão de Colaboradores\obj\Debug\net6.0-windows\Gestão_de_Colaboradores.Dash.resources
+C:\Users\daniel.marques\Documents\Engenharia Informática\FP\C#\Gestão Colaboradores\Gestão de Colaboradores\obj\Debug\net6.0-windows\Gestão_de_Colaboradores.Editar.resources
+C:\Users\daniel.marques\Documents\Engenharia Informática\FP\C#\Gestão Colaboradores\Gestão de Colaboradores\obj\Debug\net6.0-windows\Gestão_de_Colaboradores.Login.resources
+C:\Users\daniel.marques\Documents\Engenharia Informática\FP\C#\Gestão Colaboradores\Gestão de Colaboradores\obj\Debug\net6.0-windows\GestãoColaboradores.Properties.Resources.resources
+C:\Users\daniel.marques\Documents\Engenharia Informática\FP\C#\Gestão Colaboradores\Gestão de Colaboradores\obj\Debug\net6.0-windows\Gestao Colaboradores.csproj.GenerateResource.cache
+C:\Users\daniel.marques\Documents\Engenharia Informática\FP\C#\Gestão Colaboradores\Gestão de Colaboradores\obj\Debug\net6.0-windows\Gestao Colaboradores.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\daniel.marques\Documents\Engenharia Informática\FP\C#\Gestão Colaboradores\Gestão de Colaboradores\obj\Debug\net6.0-windows\Gestao Colaboradores.AssemblyInfoInputs.cache
+C:\Users\daniel.marques\Documents\Engenharia Informática\FP\C#\Gestão Colaboradores\Gestão de Colaboradores\obj\Debug\net6.0-windows\Gestao Colaboradores.AssemblyInfo.cs
+C:\Users\daniel.marques\Documents\Engenharia Informática\FP\C#\Gestão Colaboradores\Gestão de Colaboradores\obj\Debug\net6.0-windows\Gestao Colaboradores.csproj.CoreCompileInputs.cache

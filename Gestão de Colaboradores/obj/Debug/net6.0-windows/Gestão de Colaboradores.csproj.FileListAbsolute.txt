@@ -1,0 +1,28 @@
+C:\Users\daniel.marques\Documents\Engenharia Informática\FP\C#\Gestão Colaboradores\Gestão de Colaboradores\bin\Debug\net6.0-windows\Gestão de Colaboradores.exe
+C:\Users\daniel.marques\Documents\Engenharia Informática\FP\C#\Gestão Colaboradores\Gestão de Colaboradores\bin\Debug\net6.0-windows\Gestão de Colaboradores.deps.json
+C:\Users\daniel.marques\Documents\Engenharia Informática\FP\C#\Gestão Colaboradores\Gestão de Colaboradores\bin\Debug\net6.0-windows\Gestão de Colaboradores.runtimeconfig.json
+C:\Users\daniel.marques\Documents\Engenharia Informática\FP\C#\Gestão Colaboradores\Gestão de Colaboradores\bin\Debug\net6.0-windows\Gestão de Colaboradores.dll
+C:\Users\daniel.marques\Documents\Engenharia Informática\FP\C#\Gestão Colaboradores\Gestão de Colaboradores\bin\Debug\net6.0-windows\Gestão de Colaboradores.pdb
+C:\Users\daniel.marques\Documents\Engenharia Informática\FP\C#\Gestão Colaboradores\Gestão de Colaboradores\obj\Debug\net6.0-windows\Gestão de Colaboradores.csproj.AssemblyReference.cache
+C:\Users\daniel.marques\Documents\Engenharia Informática\FP\C#\Gestão Colaboradores\Gestão de Colaboradores\obj\Debug\net6.0-windows\Gestão de Colaboradores.csproj.GenerateResource.cache
+C:\Users\daniel.marques\Documents\Engenharia Informática\FP\C#\Gestão Colaboradores\Gestão de Colaboradores\obj\Debug\net6.0-windows\Gestão de Colaboradores.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\daniel.marques\Documents\Engenharia Informática\FP\C#\Gestão Colaboradores\Gestão de Colaboradores\obj\Debug\net6.0-windows\Gestão de Colaboradores.AssemblyInfoInputs.cache
+C:\Users\daniel.marques\Documents\Engenharia Informática\FP\C#\Gestão Colaboradores\Gestão de Colaboradores\obj\Debug\net6.0-windows\Gestão de Colaboradores.AssemblyInfo.cs
+C:\Users\daniel.marques\Documents\Engenharia Informática\FP\C#\Gestão Colaboradores\Gestão de Colaboradores\obj\Debug\net6.0-windows\Gestão de Colaboradores.csproj.CoreCompileInputs.cache
+C:\Users\daniel.marques\Documents\Engenharia Informática\FP\C#\Gestão Colaboradores\Gestão de Colaboradores\obj\Debug\net6.0-windows\Gestão de Colaboradores.dll
+C:\Users\daniel.marques\Documents\Engenharia Informática\FP\C#\Gestão Colaboradores\Gestão de Colaboradores\obj\Debug\net6.0-windows\refint\Gestão de Colaboradores.dll
+C:\Users\daniel.marques\Documents\Engenharia Informática\FP\C#\Gestão Colaboradores\Gestão de Colaboradores\obj\Debug\net6.0-windows\Gestão de Colaboradores.pdb
+C:\Users\daniel.marques\Documents\Engenharia Informática\FP\C#\Gestão Colaboradores\Gestão de Colaboradores\obj\Debug\net6.0-windows\Gestão de Colaboradores.genruntimeconfig.cache
+C:\Users\daniel.marques\Documents\Engenharia Informática\FP\C#\Gestão Colaboradores\Gestão de Colaboradores\obj\Debug\net6.0-windows\ref\Gestão de Colaboradores.dll
+C:\Users\daniel.marques\Documents\Engenharia Informática\FP\C#\Gestão Colaboradores\Gestão de Colaboradores\obj\Debug\net6.0-windows\Gestão_de_Colaboradores.Login.resources
+C:\Users\daniel.marques\Documents\Engenharia Informática\FP\C#\Gestão Colaboradores\Gestão de Colaboradores\obj\Debug\net6.0-windows\Gestão_de_Colaboradores.Properties.Resources.resources
+C:\Users\daniel.marques\Documents\Engenharia Informática\FP\C#\Gestão Colaboradores\Gestão de Colaboradores\obj\Debug\net6.0-windows\Gestão_de_Colaboradores.Dash.resources
+C:\Users\daniel.marques\Documents\Engenharia Informática\FP\C#\Gestão Colaboradores\Gestão de Colaboradores\bin\Debug\net6.0-windows\System.Data.SqlClient.dll
+C:\Users\daniel.marques\Documents\Engenharia Informática\FP\C#\Gestão Colaboradores\Gestão de Colaboradores\bin\Debug\net6.0-windows\runtimes\win-arm64\native\sni.dll
+C:\Users\daniel.marques\Documents\Engenharia Informática\FP\C#\Gestão Colaboradores\Gestão de Colaboradores\bin\Debug\net6.0-windows\runtimes\win-x64\native\sni.dll
+C:\Users\daniel.marques\Documents\Engenharia Informática\FP\C#\Gestão Colaboradores\Gestão de Colaboradores\bin\Debug\net6.0-windows\runtimes\win-x86\native\sni.dll
+C:\Users\daniel.marques\Documents\Engenharia Informática\FP\C#\Gestão Colaboradores\Gestão de Colaboradores\bin\Debug\net6.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\daniel.marques\Documents\Engenharia Informática\FP\C#\Gestão Colaboradores\Gestão de Colaboradores\bin\Debug\net6.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\daniel.marques\Documents\Engenharia Informática\FP\C#\Gestão Colaboradores\Gestão de Colaboradores\obj\Debug\net6.0-windows\Gestão de Colaboradores.csproj.CopyComplete
+C:\Users\daniel.marques\Documents\Engenharia Informática\FP\C#\Gestão Colaboradores\Gestão de Colaboradores\obj\Debug\net6.0-windows\Gestão_de_Colaboradores.Criar.resources
+C:\Users\daniel.marques\Documents\Engenharia Informática\FP\C#\Gestão Colaboradores\Gestão de Colaboradores\obj\Debug\net6.0-windows\Gestão_de_Colaboradores.Editar.resources
