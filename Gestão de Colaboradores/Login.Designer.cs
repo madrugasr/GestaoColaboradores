@@ -53,6 +53,8 @@
             // 
             // label1
             // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.Color.White;
@@ -65,10 +67,12 @@
             // 
             // email
             // 
+            this.email.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.email.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.email.Location = new System.Drawing.Point(89, 167);
             this.email.Name = "email";
-            this.email.Size = new System.Drawing.Size(164, 23);
+            this.email.Size = new System.Drawing.Size(200, 23);
             this.email.TabIndex = 2;
             // 
             // label2
@@ -85,6 +89,8 @@
             // 
             // label3
             // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label3.ForeColor = System.Drawing.Color.White;
@@ -97,15 +103,19 @@
             // 
             // password
             // 
+            this.password.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.password.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.password.Location = new System.Drawing.Point(89, 196);
             this.password.Name = "password";
             this.password.PasswordChar = '#';
-            this.password.Size = new System.Drawing.Size(164, 23);
+            this.password.Size = new System.Drawing.Size(200, 23);
             this.password.TabIndex = 5;
             // 
             // Criar
             // 
+            this.Criar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.Criar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Criar.FlatAppearance.BorderSize = 0;
             this.Criar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -120,6 +130,8 @@
             // 
             // Entrar
             // 
+            this.Entrar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.Entrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Entrar.FlatAppearance.BorderSize = 2;
             this.Entrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -134,6 +146,8 @@
             // 
             // Editar
             // 
+            this.Editar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.Editar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Editar.FlatAppearance.BorderSize = 0;
             this.Editar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;

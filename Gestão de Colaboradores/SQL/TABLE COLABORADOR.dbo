@@ -1,0 +1,24 @@
+﻿#Estrutura Inicial da Tabela
+CREATE TABLE [dbo].[Colaboradores] (
+    [id_colaborador]  INT           NOT NULL IDENTITY,
+    [nome]            VARCHAR (100) NOT NULL,
+    [data_nascimento] DATE          NOT NULL,
+    [sexo]            VARCHAR (20)  NOT NULL,
+    [niss]            BIGINT        NOT NULL,
+    [nif]             INT           NOT NULL,
+    [rua]             VARCHAR (80)  NOT NULL,
+    [numero_casa]     SMALLINT      NOT NULL,
+    [concelho]        VARCHAR (50)  NOT NULL,
+    [codigo_postal]   INT           NOT NULL,
+    [telefone]        INT           NOT NULL,
+    [email]           VARCHAR (60)  NOT NULL,
+    [cargo]           VARCHAR (40)  NOT NULL,
+    [ordenado_bruto]  SMALLMONEY    NOT NULL,
+    [iban]            VARCHAR (25)  NOT NULL,
+    [cliente]         VARCHAR (50)  NOT NULL,
+    [data_ingresso]   DATE          NOT NULL,
+    [contrato]        VARCHAR (10)  NOT NULL,
+    [equipa]          VARCHAR (25)  NOT NULL,
+    PRIMARY KEY CLUSTERED ([id_colaborador] ASC)
+);
+

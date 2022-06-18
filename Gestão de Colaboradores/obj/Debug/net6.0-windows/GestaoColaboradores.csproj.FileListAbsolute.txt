@@ -58,7 +58,6 @@ C:\Users\daniel.marques\Documents\GitHub\GestaoColaboradores\Gestão de Colabora
 C:\Users\daniel.marques\Documents\GitHub\GestaoColaboradores\Gestão de Colaboradores\bin\Debug\net6.0-windows\pt-BR\Microsoft.Data.Tools.Utilities.resources.dll
 C:\Users\daniel.marques\Documents\GitHub\GestaoColaboradores\Gestão de Colaboradores\bin\Debug\net6.0-windows\pt-BR\Microsoft.SqlServer.TransactSql.ScriptDom.resources.dll
 C:\Users\daniel.marques\Documents\GitHub\GestaoColaboradores\Gestão de Colaboradores\obj\Debug\net6.0-windows\GestaoColaboradores.csproj.AssemblyReference.cache
-C:\Users\daniel.marques\Documents\GitHub\GestaoColaboradores\Gestão de Colaboradores\obj\Debug\net6.0-windows\GestaoColaboradores.Colaborador.Novo.resources
 C:\Users\daniel.marques\Documents\GitHub\GestaoColaboradores\Gestão de Colaboradores\obj\Debug\net6.0-windows\Gestão_de_Colaboradores.Criar.resources
 C:\Users\daniel.marques\Documents\GitHub\GestaoColaboradores\Gestão de Colaboradores\obj\Debug\net6.0-windows\Gestão_de_Colaboradores.Dash.resources
 C:\Users\daniel.marques\Documents\GitHub\GestaoColaboradores\Gestão de Colaboradores\obj\Debug\net6.0-windows\Gestão_de_Colaboradores.Editar.resources
@@ -75,3 +74,7 @@ C:\Users\daniel.marques\Documents\GitHub\GestaoColaboradores\Gestão de Colabora
 C:\Users\daniel.marques\Documents\GitHub\GestaoColaboradores\Gestão de Colaboradores\obj\Debug\net6.0-windows\GestaoColaboradores.pdb
 C:\Users\daniel.marques\Documents\GitHub\GestaoColaboradores\Gestão de Colaboradores\obj\Debug\net6.0-windows\GestaoColaboradores.genruntimeconfig.cache
 C:\Users\daniel.marques\Documents\GitHub\GestaoColaboradores\Gestão de Colaboradores\obj\Debug\net6.0-windows\ref\GestaoColaboradores.dll
+C:\Users\daniel.marques\Documents\GitHub\GestaoColaboradores\Gestão de Colaboradores\obj\Debug\net6.0-windows\GestaoColaboradores.Colaborador.Alterar.resources
+C:\Users\daniel.marques\Documents\GitHub\GestaoColaboradores\Gestão de Colaboradores\obj\Debug\net6.0-windows\GestaoColaboradores.Colaborador.Consultar.resources
+C:\Users\daniel.marques\Documents\GitHub\GestaoColaboradores\Gestão de Colaboradores\obj\Debug\net6.0-windows\GestaoColaboradores.Colaborador.Eliminar.resources
+C:\Users\daniel.marques\Documents\GitHub\GestaoColaboradores\Gestão de Colaboradores\obj\Debug\net6.0-windows\GestaoColaboradores.Colaborador.Novo.resources

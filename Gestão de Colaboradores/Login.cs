@@ -13,7 +13,7 @@ namespace Gestão_de_Colaboradores
 
         private void Entrar_Click(object sender, EventArgs e)
         {
-            //Validação
+                //Validação
             if (email.Text == "" || password.Text == "")
             {
                 MessageBox.Show("Preencha todos os Campos!",
@@ -31,26 +31,29 @@ namespace Gestão_de_Colaboradores
                     conexaoBD.Open();
 
                     //Verifica se os dados inseridos estão no BD
-                    SqlCommand sqlCmd = new()
+                    SqlCommand SqlSelect = new()
                     {
                         Connection = conexaoBD,
 
                         //Statement de SQLs
                         CommandText = "SELECT * FROM Login " +
-                        "WHERE email = '" + email.Text + "' AND password = '" + password.Text + "'"
+                        "WHERE email = '" + email.Text + "' " +
+                        "AND password = '" + password.Text + "'"
                     };
 
-                    //Leitura dos Dados  e execução do Statement
-                    SqlDataReader recordReader = sqlCmd.ExecuteReader();
+                    //Leitura dos Dados e execução do Statement
+                    SqlDataReader recordReader = SqlSelect.ExecuteReader();
 
                     //Verificar se existe algum registo no Banco de Dados
                     if (recordReader.HasRows)
                     {
-                        conexaoBD.Close();
 
                         //Abrir o formulário principal Dash
-                        Dash dashboard = new();
-                        dashboard.ShowDialog();
+                        Dash dash = new()
+                        {
+                            LoginDash = email.Text
+                        };
+                        dash.ShowDialog();
 
                         //Fechar o formulário Login
                         //Application.Exit();
@@ -62,6 +65,7 @@ namespace Gestão_de_Colaboradores
                 }
                 catch (SqlException ex)
                 {
+                    
                     MessageBox.Show(ex.Message, "Erro SQL", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 finally

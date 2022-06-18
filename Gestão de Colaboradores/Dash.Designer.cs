@@ -28,11 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dash));
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.time = new System.Windows.Forms.Label();
+            this.user = new System.Windows.Forms.Label();
+            this.t = new System.Windows.Forms.Label();
+            this.u = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelPrincipal = new System.Windows.Forms.Panel();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
@@ -47,6 +50,7 @@
             this.EliminarColbadorador = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
             this.MapaColaborador = new System.Windows.Forms.ToolStripMenuItem();
+            this.HoursNow = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -61,42 +65,59 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(166, 561);
+            this.panel1.Size = new System.Drawing.Size(175, 561);
             this.panel1.TabIndex = 0;
             // 
             // panel2
             // 
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel2.Controls.Add(this.label3);
-            this.panel2.Controls.Add(this.label1);
+            this.panel2.Controls.Add(this.time);
+            this.panel2.Controls.Add(this.user);
+            this.panel2.Controls.Add(this.t);
+            this.panel2.Controls.Add(this.u);
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(162, 162);
+            this.panel2.Size = new System.Drawing.Size(171, 162);
             this.panel2.TabIndex = 0;
             // 
-            // label3
+            // time
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(161)))), ((int)(((byte)(178)))));
-            this.label3.Location = new System.Drawing.Point(35, 126);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(88, 13);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Logged in Time";
+            this.time.AutoSize = true;
+            this.time.Location = new System.Drawing.Point(44, 122);
+            this.time.Name = "time";
+            this.time.Size = new System.Drawing.Size(39, 17);
+            this.time.TabIndex = 3;
+            this.time.Text = "Time";
             // 
-            // label1
+            // user
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.label1.Location = new System.Drawing.Point(62, 99);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 17);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "User";
+            this.user.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.user.AutoSize = true;
+            this.user.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.user.ForeColor = System.Drawing.Color.White;
+            this.user.Location = new System.Drawing.Point(8, 96);
+            this.user.Name = "user";
+            this.user.Size = new System.Drawing.Size(33, 15);
+            this.user.TabIndex = 2;
+            this.user.Text = "User";
+            this.user.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // t
+            // 
+            this.t.Location = new System.Drawing.Point(0, 0);
+            this.t.Name = "t";
+            this.t.Size = new System.Drawing.Size(100, 23);
+            this.t.TabIndex = 0;
+            // 
+            // u
+            // 
+            this.u.Location = new System.Drawing.Point(0, 0);
+            this.u.Name = "u";
+            this.u.Size = new System.Drawing.Size(100, 23);
+            this.u.TabIndex = 1;
             // 
             // pictureBox1
             // 
@@ -110,13 +131,16 @@
             // 
             // panelPrincipal
             // 
+            this.panelPrincipal.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panelPrincipal.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panelPrincipal.CausesValidation = false;
             this.panelPrincipal.Controls.Add(this.menuStrip1);
-            this.panelPrincipal.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelPrincipal.Location = new System.Drawing.Point(166, 0);
+            this.panelPrincipal.Location = new System.Drawing.Point(175, 0);
+            this.panelPrincipal.MinimumSize = new System.Drawing.Size(492, 561);
             this.panelPrincipal.Name = "panelPrincipal";
-            this.panelPrincipal.Size = new System.Drawing.Size(501, 561);
+            this.panelPrincipal.Size = new System.Drawing.Size(492, 561);
             this.panelPrincipal.TabIndex = 1;
             // 
             // menuStrip1
@@ -127,8 +151,9 @@
             this.toolStripMenuItem5});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(499, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(490, 24);
             this.menuStrip1.TabIndex = 0;
+            this.menuStrip1.TabStop = true;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // toolStripMenuItem1
@@ -182,12 +207,14 @@
             this.ConsultarColaborador.Name = "ConsultarColaborador";
             this.ConsultarColaborador.Size = new System.Drawing.Size(125, 22);
             this.ConsultarColaborador.Text = "Consultar";
+            this.ConsultarColaborador.Click += new System.EventHandler(this.ConsultarColaborador_Click);
             // 
             // AlterarColaborador
             // 
             this.AlterarColaborador.Name = "AlterarColaborador";
             this.AlterarColaborador.Size = new System.Drawing.Size(125, 22);
             this.AlterarColaborador.Text = "Alterar";
+            this.AlterarColaborador.Click += new System.EventHandler(this.AlterarColaborador_Click);
             // 
             // EliminarColbadorador
             // 
@@ -209,6 +236,11 @@
             this.MapaColaborador.Size = new System.Drawing.Size(206, 22);
             this.MapaColaborador.Text = "Mapa dos Colaboradores";
             // 
+            // HoursNow
+            // 
+            this.HoursNow.Enabled = true;
+            this.HoursNow.Tick += new System.EventHandler(this.HoursNow_Tick);
+            // 
             // Dash
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
@@ -219,7 +251,10 @@
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
+            this.MaximizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(683, 600);
             this.Name = "Dash";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -240,9 +275,9 @@
 
         private Panel panel1;
         private Panel panel2;
-        private Label label1;
+        private Label u;
         private PictureBox pictureBox1;
-        private Label label3;
+        private Label t;
         private Panel panelPrincipal;
         private MenuStrip menuStrip1;
         private ToolStripMenuItem toolStripMenuItem1;
@@ -256,5 +291,8 @@
         private ToolStripMenuItem MapaColaborador;
         private ToolStripMenuItem SalvarArquivo;
         private ToolStripMenuItem SalvarComoArquivo;
+        private Label time;
+        private Label user;
+        private System.Windows.Forms.Timer HoursNow;
     }
 }

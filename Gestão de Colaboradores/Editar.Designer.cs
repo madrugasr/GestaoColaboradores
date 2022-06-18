@@ -44,6 +44,8 @@
             // 
             // repeatPassword
             // 
+            this.repeatPassword.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.repeatPassword.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.repeatPassword.Location = new System.Drawing.Point(157, 205);
             this.repeatPassword.Name = "repeatPassword";
@@ -53,6 +55,8 @@
             // 
             // label4
             // 
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label4.ForeColor = System.Drawing.Color.White;
@@ -65,6 +69,8 @@
             // 
             // EditarRegistro
             // 
+            this.EditarRegistro.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.EditarRegistro.Cursor = System.Windows.Forms.Cursors.Hand;
             this.EditarRegistro.FlatAppearance.BorderSize = 2;
             this.EditarRegistro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -79,6 +85,8 @@
             // 
             // password
             // 
+            this.password.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.password.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.password.Location = new System.Drawing.Point(98, 176);
             this.password.Name = "password";
@@ -88,6 +96,8 @@
             // 
             // label3
             // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label3.ForeColor = System.Drawing.Color.White;
@@ -100,6 +110,8 @@
             // 
             // email
             // 
+            this.email.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.email.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.email.Enabled = false;
             this.email.Location = new System.Drawing.Point(98, 147);
@@ -109,6 +121,8 @@
             // 
             // label1
             // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.Color.White;
@@ -121,6 +135,8 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.Image = global::GestaoColaboradores.Properties.Resources.edit_profile;
             this.pictureBox1.Location = new System.Drawing.Point(189, 17);
             this.pictureBox1.Name = "pictureBox1";
@@ -131,18 +147,22 @@
             // 
             // label2
             // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.label2.Location = new System.Drawing.Point(35, 56);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(107, 37);
+            this.label2.Size = new System.Drawing.Size(93, 37);
             this.label2.TabIndex = 13;
-            this.label2.Text = "Alterar";
+            this.label2.Text = "Editar";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Remover
             // 
+            this.Remover.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.Remover.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Remover.FlatAppearance.BorderSize = 2;
             this.Remover.FlatStyle = System.Windows.Forms.FlatStyle.Flat;

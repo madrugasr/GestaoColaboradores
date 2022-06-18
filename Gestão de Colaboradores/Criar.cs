@@ -42,7 +42,6 @@ namespace Gestão_de_Colaboradores
                     SqlCommand SqlConsult = new()
                     {
                         Connection = conexaoBD,
-
                         CommandText = "SELECT * FROM Login WHERE email = '" + email.Text + "'"
                     };
 
@@ -51,15 +50,12 @@ namespace Gestão_de_Colaboradores
 
                     if (recordReader.HasRows)
                     {
-                        recordReader.Close();
-
                         MessageBox.Show("Registro Existente!", "Erro",
-                            MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            MessageBoxButtons.OK, MessageBoxIcon.Error);                       
                     }
                     else
-                    {
+                    {    
                         recordReader.Close();
-
                         SqlCommand SqlInsert = new()
                         {
                             Connection = conexaoBD,
