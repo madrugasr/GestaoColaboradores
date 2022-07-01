@@ -1,13 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
+﻿
 using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace GestaoColaboradores.Colaborador
 {
@@ -25,7 +17,6 @@ namespace GestaoColaboradores.Colaborador
 
         private void CadastrarColaborador_Click(object sender, EventArgs e)
         {
-            ValidateForm();
 
             //Validação do Formulário
             if (nomeCompleto.Text == "" || dataNascimento.Text == "" || sexo.Text == ""
@@ -34,10 +25,13 @@ namespace GestaoColaboradores.Colaborador
                 || cargo.Text == "" || ordenado_bruto.Text == "" || iban.Text == "" || cliente.Text == ""
                 || ingresso.Text == "" || contrato.Text == "" || equipa.Text == "")
             {
-                    MessageBox.Show("Preencha todos os campos!");
+               MessageBox.Show("Preencha todos os campos!");
             }
+            
             else
             {
+
+                ValidateForm();
                 //Inserindo dados na tabela Colaboradores           
                 SqlConnection conexaoBD = new(@"Data Source=WP-01-NBK-02654; Initial Catalog=Colaboradores;
                                                   Integrated Security=True");
@@ -58,7 +52,6 @@ namespace GestaoColaboradores.Colaborador
                         "(@nomeCompleto, @dataNascimento, @sexo, @niss, @nif, @rua, @numero_casa, " +
                         "@concelho, @codigo_postal, @telefone, @email, @cargo, @ordenado_bruto, " +
                         "@iban, @cliente, @ingresso, @contrato, @equipa)"
-
                     };
                     
 
@@ -73,16 +66,37 @@ namespace GestaoColaboradores.Colaborador
                     string sexo_ = Convert.ToString(sexo.Text);
                     SqlInsertCollaborator.Parameters.AddWithValue("@sexo", sexo_);
 
-                    SqlInsertCollaborator.Parameters.AddWithValue("@niss", niss.Text);
-                    SqlInsertCollaborator.Parameters.AddWithValue("@nif", nif.Text);
+                    //Convertendo NIF em Int
+                    int niss_ = Convert.ToInt32(nif.Text);
+                    SqlInsertCollaborator.Parameters.AddWithValue("@niss", niss_);
+                    
+                    //Convertendo NIF em Int
+                    int nif_ = Convert.ToInt32(nif.Text);
+                    
+                    SqlInsertCollaborator.Parameters.AddWithValue("@nif", niss_);
                     SqlInsertCollaborator.Parameters.AddWithValue("@rua", rua.Text);
-                    SqlInsertCollaborator.Parameters.AddWithValue("@numero_casa", numero_casa.Text);
+                    
+                    //Convertendo Número de Casa em Int
+                    int numero_casa_ = Convert.ToInt32(numero_casa.Text);
+                    
+                    SqlInsertCollaborator.Parameters.AddWithValue("@numero_casa", numero_casa_);
                     SqlInsertCollaborator.Parameters.AddWithValue("@concelho", concelho.Text);
-                    SqlInsertCollaborator.Parameters.AddWithValue("@codigo_postal", codigo_postal.Text);
-                    SqlInsertCollaborator.Parameters.AddWithValue("@telefone", telefone.Text);
+                    
+                    //Convertendo Código Postal em Int
+                    int codigo_postal_ = Convert.ToInt32(codigo_postal.Text);      
+                    SqlInsertCollaborator.Parameters.AddWithValue("@codigo_postal", codigo_postal_);
+                    
+                    //Convertendo Telefone em Int
+                    int telefone_ = Convert.ToInt32(telefone.Text);
+                    SqlInsertCollaborator.Parameters.AddWithValue("@telefone", telefone_);
+                    
                     SqlInsertCollaborator.Parameters.AddWithValue("@email", email.Text);
                     SqlInsertCollaborator.Parameters.AddWithValue("@cargo", cargo.Text);
-                    SqlInsertCollaborator.Parameters.AddWithValue("@ordenado_bruto", ordenado_bruto.Text);
+                    
+                    //Convertendo Ordenado Bruto em Float
+                    float ordenado_bruto_ = Convert.ToSingle(ordenado_bruto.Text);
+                    SqlInsertCollaborator.Parameters.AddWithValue("@ordenado_bruto", ordenado_bruto_);
+                    
                     SqlInsertCollaborator.Parameters.AddWithValue("@iban", iban.Text);
                     SqlInsertCollaborator.Parameters.AddWithValue("@cliente", cliente.Text);
 
@@ -111,7 +125,7 @@ namespace GestaoColaboradores.Colaborador
                 }
                 catch (SqlException ex)
                 {
-                    MessageBox.Show(ex.Message, "Erro ao conectar a Base de Dados", MessageBoxButtons.OK,
+                    MessageBox.Show(ex.Message, "Erro", MessageBoxButtons.OK,
                                     MessageBoxIcon.Error);
 
                 }
@@ -123,7 +137,7 @@ namespace GestaoColaboradores.Colaborador
             
         }
 
-        //Formulário de Validação.
+        //Formulário de Validação dos Dados.
         public void ValidateForm()
         {
             //Validação do Nome Completo
@@ -142,7 +156,8 @@ namespace GestaoColaboradores.Colaborador
             else
             {
                 DateTime data_nascimento = Convert.ToDateTime(dataNascimento.Text);
-                if (data_nascimento >= DateTime.Now || data_nascimento < DateTime.Now.AddYears(-65))
+                if (data_nascimento >= DateTime.Now || data_nascimento < DateTime.Now.AddYears(-18) 
+                    || data_nascimento > DateTime.Now.AddYears(-65))
                 {
                     MessageBox.Show("Data de Nascimento inválida!");
                     dataNascimento.BackColor = Color.Red;
@@ -150,19 +165,12 @@ namespace GestaoColaboradores.Colaborador
             }
 
             //Validação do Sexo
-            if (sexo.Text == "")
+            if (sexo.Text == "" || sexo.Text != "Masculino" || sexo.Text != "Feminino")
             {
                 MessageBox.Show("Preencha o Sexo!");
                 sexo.BackColor = Color.Red;
             }
-            else 
-            {
-                if (sexo.Text != "Masculino" || sexo.Text != "Feminino")
-                {
-                    MessageBox.Show("Sexo inválido!");
-                    sexo.BackColor = Color.Red;
-                }
-            }
+           
 
             //Validação do NISS
             if (niss.Text == "" || niss.Text.Length != 11)
@@ -173,7 +181,7 @@ namespace GestaoColaboradores.Colaborador
             else
             {
                 //Regra de Validação do NISS
-                if (niss.Text.Substring(0, 1) != "0")
+                if (niss.Text.Substring(0, 10) == "0")
                 {
                     MessageBox.Show("NISS inválido!");
                     niss.BackColor = Color.Red;
@@ -189,26 +197,18 @@ namespace GestaoColaboradores.Colaborador
             else
             {
                 //Regra de Validação do NIF
-                if (nif.Text.Substring(0, 1) != "0")
+                if (nif.Text.Substring(0, 8) == "0")
                 {
                     MessageBox.Show("NIF inválido!");
                     nif.BackColor = Color.Red;
                 }
             }
-          
+
             //Validação da Rua
             if (rua.Text == "")
             {
                 MessageBox.Show("Preencha a Rua!");
                 rua.BackColor = Color.Red;
-            }
-            else
-            {
-                if (rua.Text.Length < 10)
-                {
-                    MessageBox.Show("Rua inválida!");
-                    rua.BackColor = Color.Red;
-                }
             }
 
             //Validação do Número da Casa
@@ -226,7 +226,7 @@ namespace GestaoColaboradores.Colaborador
             }
 
             //Validação do Código Postal
-            if (codigo_postal.Text == "" || codigo_postal.Text.Length < 4)
+            if (codigo_postal.Text == "" || codigo_postal.Text.Length < 7)
             {
                 MessageBox.Show("Preencha o Código Postal corretamente!");
                 codigo_postal.BackColor = Color.Red;
@@ -234,7 +234,7 @@ namespace GestaoColaboradores.Colaborador
             else
             {
                 //Regra de Validação do Código Postal
-                if (codigo_postal.Text.Substring(0, 1) == "0")
+                if (codigo_postal.Text.Substring(0, 6) == "0")
                 {
                     MessageBox.Show("Código Postal inválido!");
                     codigo_postal.BackColor = Color.Red;
@@ -250,7 +250,7 @@ namespace GestaoColaboradores.Colaborador
             else
             {
                 //Regra de Validação do Telefone
-                if (telefone.Text.Substring(0, 1) == "0")
+                if (telefone.Text.Substring(0, 8) == "0")
                 {
                     MessageBox.Show("Telefone inválido!");
                     telefone.BackColor = Color.Red;
@@ -258,54 +258,31 @@ namespace GestaoColaboradores.Colaborador
             }
 
             //Validação do Email
-            if (email.Text == "" || email.Text.Length < 10)
+            if (email.Text == "")
             {
-                MessageBox.Show("Preencha o Email corretamente!");
+                MessageBox.Show("Preencha o Email!");
                 email.BackColor = Color.Red;
             }
-            else
-            {
-                //Regra de Validação do Email
-                if (email.Text.Substring(0, 1) != "@" || email.Text.Substring(0, 1) != ".")
-                {
-                    MessageBox.Show("Email inválido!");
-                    email.BackColor = Color.Red;
-                }                             
-            }
+            
 
             //Validação do Cargo
-            if (cargo.Text == "" )
+            if (cargo.Text == "")
             {
                 MessageBox.Show("Preencha o Cargo!");
                 cargo.BackColor = Color.Red;
             }
-            else
-            {
-                if (cargo.Text.Length <= 5)
-                {
-                    MessageBox.Show("Cargo inválido!");
-                    cargo.BackColor = Color.Red;
-                }
-            }
 
             //Validação do Ordenado Bruto
-            if (ordenado_bruto.Text == "" || ordenado_bruto.Text.Length < 705 || ordenado_bruto.Text.Length < 0)
+            float ordenado = Convert.ToSingle(ordenado_bruto.Text);
+            if (ordenado < 705 || ordenado == 0 || ordenado_bruto.Text == "")
             {
-                MessageBox.Show("Preencha o Ordenado Bruto corretamente!");
+                MessageBox.Show("Ordenado Bruto inválido!");
                 ordenado_bruto.BackColor = Color.Red;
             }
-            else
-            {
-                //Regra de Validação do Ordenado Bruto
-                if (ordenado_bruto.Text.Substring(0, 1) == "0")
-                {
-                    MessageBox.Show("Ordenado Bruto inválido!");
-                    ordenado_bruto.BackColor = Color.Red;
-                }
-            }
+          
 
             //Validação do IBAN
-            if (iban.Text == "" || iban.Text.Length < 34)
+            if (iban.Text == "" || iban.Text.Length < 32)
             {
                 MessageBox.Show("Preencha o IBAN corretamente!");
                 iban.BackColor = Color.Red;
@@ -313,7 +290,7 @@ namespace GestaoColaboradores.Colaborador
             else
             {
                 //Regra de Validação do IBAN
-                if (iban.Text.Substring(0, 1) == "0")
+                if (iban.Text.Substring(0, 31) == "0")
                 {
                     MessageBox.Show("IBAN inválido!");
                     iban.BackColor = Color.Red;
@@ -321,40 +298,23 @@ namespace GestaoColaboradores.Colaborador
             }
 
             //Validação da Data do Ingresso do Colaborador
-            if (ingresso.Text == "")
+            DateTime data_ingresso = Convert.ToDateTime(ingresso.Text);
+            if (ingresso.Text == "" || data_ingresso > DateTime.Now)
             {
                 MessageBox.Show("Preencha a Data de Ingresso corretamente!");
-                dataNascimento.BackColor = Color.Red;
-            }
-            else
-            {
-                DateTime ingresso_colaborador = Convert.ToDateTime(ingresso.Text);
-                if (ingresso_colaborador > DateTime.Now || ingresso_colaborador < DateTime.Now.AddYears(-2))
-                {
-                    MessageBox.Show("Data de Ingresso inválida!");
-                    ingresso.BackColor = Color.Red;
-                }
-            }
-
+                ingresso.BackColor = Color.Red;
+            }            
+          
             //Validação do Tipo de Contrato
             if (contrato.Text == "" || contrato.Text != "Efetivo" || 
                 contrato.Text != "Temporário" || contrato.Text != "Sem Termo")
             {
                 MessageBox.Show("Preencha o Tipo de Contrato corretamente!");
                 contrato.BackColor = Color.Red;
-            }
-            else
-            {
-                //Regra de Validação do Tipo de Contrato
-                if (contrato.Text.Substring(0, 1) == "0")
-                {
-                    MessageBox.Show("Tipo de Contrato inválido!");
-                    contrato.BackColor = Color.Red;
-                }
-            }
+            }            
 
             //Validação da Equipa
-            if (equipa.Text == "" || equipa.Text != "Desenvolvimento" ||
+            if (equipa.SelectedText == "" || equipa.Text != "Desenvolvimento" ||
                 equipa.Text != "Engenharia" || equipa.Text != "Suporte IT" || 
                 equipa.Text != "Produto" || equipa.Text != "Financeiros" ||
                 equipa.Text != "Recursos Humanos" || equipa.Text != "Infraestrutura" ||
@@ -363,16 +323,6 @@ namespace GestaoColaboradores.Colaborador
                 MessageBox.Show("Preencha a Equipa corretamente!");
                 equipa.BackColor = Color.Red;
             }
-            else
-            {
-                if (equipa.Text.Substring(0, 1) == "0")
-                {
-                    MessageBox.Show("Equipa inválida!");
-                    equipa.BackColor = Color.Red;
-                }
-            }
-
-            
         }
     }
 }

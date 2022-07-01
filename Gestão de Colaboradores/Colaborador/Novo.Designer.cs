@@ -30,7 +30,6 @@
         {
             this.Sair = new System.Windows.Forms.Button();
             this.nomeCompleto = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -66,11 +65,11 @@
             this.concelho = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.niss = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.nif = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -85,9 +84,9 @@
             this.Sair.FlatAppearance.BorderSize = 2;
             this.Sair.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Sair.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.Sair.Location = new System.Drawing.Point(358, 514);
+            this.Sair.Location = new System.Drawing.Point(358, 513);
             this.Sair.Name = "Sair";
-            this.Sair.Size = new System.Drawing.Size(122, 35);
+            this.Sair.Size = new System.Drawing.Size(120, 35);
             this.Sair.TabIndex = 8;
             this.Sair.Text = "Sair";
             this.Sair.UseVisualStyleBackColor = true;
@@ -99,17 +98,6 @@
             this.nomeCompleto.Name = "nomeCompleto";
             this.nomeCompleto.Size = new System.Drawing.Size(180, 23);
             this.nomeCompleto.TabIndex = 9;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(6, 30);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(98, 15);
-            this.label1.TabIndex = 10;
-            this.label1.Text = "Nome Completo";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label2
             // 
@@ -153,10 +141,14 @@
             // 
             // sexo
             // 
+            this.sexo.AutoCompleteCustomSource.AddRange(new string[] {
+            "Masculino",
+            "Feminino"});
+            this.sexo.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.sexo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.sexo.FormattingEnabled = true;
             this.sexo.Items.AddRange(new object[] {
-            "Feminimo",
+            "Feminino",
             "Masculino"});
             this.sexo.Location = new System.Drawing.Point(353, 22);
             this.sexo.Name = "sexo";
@@ -188,7 +180,7 @@
             this.groupBox3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.groupBox3.Location = new System.Drawing.Point(12, 259);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(468, 56);
+            this.groupBox3.Size = new System.Drawing.Size(466, 55);
             this.groupBox3.TabIndex = 17;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Contatos";
@@ -219,9 +211,9 @@
             this.CadastrarColaborador.FlatAppearance.BorderSize = 2;
             this.CadastrarColaborador.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.CadastrarColaborador.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.CadastrarColaborador.Location = new System.Drawing.Point(12, 514);
+            this.CadastrarColaborador.Location = new System.Drawing.Point(12, 513);
             this.CadastrarColaborador.Name = "CadastrarColaborador";
-            this.CadastrarColaborador.Size = new System.Drawing.Size(125, 35);
+            this.CadastrarColaborador.Size = new System.Drawing.Size(123, 35);
             this.CadastrarColaborador.TabIndex = 19;
             this.CadastrarColaborador.Text = "Cadastrar";
             this.CadastrarColaborador.UseVisualStyleBackColor = true;
@@ -249,13 +241,23 @@
             this.groupBox4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.groupBox4.Location = new System.Drawing.Point(12, 321);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(468, 145);
+            this.groupBox4.Size = new System.Drawing.Size(466, 144);
             this.groupBox4.TabIndex = 20;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Profissão";
             // 
             // equipa
             // 
+            this.equipa.AutoCompleteCustomSource.AddRange(new string[] {
+            "Desenvolvimento",
+            "Engenharia",
+            "Suporte IT",
+            "Produto",
+            "Financeiro",
+            "Recursos Humanos",
+            "Infraestrutura",
+            "Teste"});
+            this.equipa.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.equipa.Cursor = System.Windows.Forms.Cursors.Hand;
             this.equipa.FormattingEnabled = true;
             this.equipa.Items.AddRange(new object[] {
@@ -323,6 +325,11 @@
             // 
             // contrato
             // 
+            this.contrato.AutoCompleteCustomSource.AddRange(new string[] {
+            "Efetivo",
+            "Temporário",
+            "Sem Termo"});
+            this.contrato.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.contrato.Cursor = System.Windows.Forms.Cursors.Hand;
             this.contrato.FormattingEnabled = true;
             this.contrato.Items.AddRange(new object[] {
@@ -419,7 +426,7 @@
             this.groupBox2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.groupBox2.Location = new System.Drawing.Point(12, 163);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(468, 90);
+            this.groupBox2.Size = new System.Drawing.Size(466, 89);
             this.groupBox2.TabIndex = 21;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Morada";
@@ -501,12 +508,12 @@
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.niss);
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.nif);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.nomeCompleto);
-            this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.sexo);
@@ -514,10 +521,21 @@
             this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.groupBox1.Location = new System.Drawing.Point(12, 42);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(468, 115);
+            this.groupBox1.Size = new System.Drawing.Size(466, 114);
             this.groupBox1.TabIndex = 22;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Dados Pessoais";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.Location = new System.Drawing.Point(6, 30);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(98, 15);
+            this.label1.TabIndex = 21;
+            this.label1.Text = "Nome Completo";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // niss
             // 
@@ -560,7 +578,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(492, 561);
+            this.ClientSize = new System.Drawing.Size(490, 560);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox4);
@@ -571,7 +589,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(430, 493);
+            this.MinimumSize = new System.Drawing.Size(490, 560);
             this.Name = "Novo";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -592,7 +610,6 @@
 
         private Button Sair;
         private TextBox nomeCompleto;
-        private Label label1;
         private Label label2;
         private Label label3;
         private Label label4;
@@ -627,11 +644,11 @@
         private Label label8;
         private TextBox nif;
         private Label label6;
-        private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private TextBox codigo_postal;
         private ComboBox equipa;
         private Label label13;
         private ComboBox contrato;
         private Label label14;
+        private Label label1;
     }
 }

@@ -1,4 +1,10 @@
-namespace Gestão_de_Colaboradores
+
+
+
+
+using Gestão_de_Colaboradores;
+
+namespace GestaoColaboradores
 {
     internal static class Program
     {
